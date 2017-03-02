@@ -19,6 +19,9 @@ postgres
 rails db:create
 
 
+rails g controller pages home
+
+
 * Database initialization
 
 * How to run the test suite
