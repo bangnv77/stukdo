@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Add twitter-bootstrap gem
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+# Add font-awesome-rails
+gem 'font-awesome-rails'
