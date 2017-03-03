@@ -21,6 +21,8 @@ rails db:create
 
 rails g controller pages home
 
+rails g scaffold task content:text
+
 
 * Database initialization
 
