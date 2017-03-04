@@ -58,3 +58,6 @@ gem 'simple_form'
 
 # Add Devise
 gem 'devise'
+
+# transform plain text to html code
+gem 'auto_html'
