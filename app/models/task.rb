@@ -1,18 +1,21 @@
 class Task < ApplicationRecord
   belongs_to :user
 
-  content = AutoHtml::Pipeline.new(
-    AutoHtml::HtmlEscape.new,
-    AutoHtml::Markdown.new,
-    AutoHtml::Image,
-    AutoHtml::Link,
-    AutoHtml::SimpleFormat
-  )
+  validates :user_id, presence: true
+  validates :content, presence: true
 
-  def text=(t)
-    super(t)
-    self[:text_html] = content.call(t)
-  end
+  # content = AutoHtml::Pipeline.new(
+  #   AutoHtml::HtmlEscape.new,
+  #   AutoHtml::Markdown.new,
+  #   AutoHtml::Image,
+  #   AutoHtml::Link,
+  #   AutoHtml::SimpleFormat
+  # )
+  #
+  # def text=(t)
+  #   super(t)
+  #   self[:text_html] = content.call(t)
+  # end
 
   # auto_html_for :content do
   #   html_escape
